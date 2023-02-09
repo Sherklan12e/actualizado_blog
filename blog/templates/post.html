@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- component -->
+<div class="   ">
+    
+    <div class="d-flex flex-wrap justify-content-center"><h1 style="color: black;" class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">From the blog</h1>
+        <div class="d-flex  post flex-wrap justify-content-center">
+
+            {% for post in posts %}
+            <div class="col-md-6 des  ">
+                <div class="card dev mb-3 ">
+                    <div style="" class="container  saq px-6 py-10 mx-auto">
+
+
+                        <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+                            <div class="lg:flex">
+                                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="{{post.image.url}}"
+                                    alt="">
+
+                                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                                    <h6 style="color: black;"
+                                        class=" font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+                                        {{post.title}}</h6>
+                                    <a style="color: black;" href="{% url 'post_detail' post.id %}"
+                                        class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                                        {{post.description|striptags|truncatechars:60}}
+                                    </a>
+
+                                    <span style="color: black;"
+                                        class="text-sm text-gray-500 dark:text-gray-300">{{post.date}}</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

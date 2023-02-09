@@ -1,0 +1,23 @@
+.sepa{
+    background-image: radial-gradient(circle at 0% 0%, #afedff 0, #79d4fd 25%, #1eb8f3 50%, #009cea 75%, #0083e1 100%);
+    color: #0000;
+}
+.foos{
+    background-image: radial-gradient(circle at 0% 0%, #afedff 0, #79d4fd 25%, #1eb8f3 50%, #009cea 75%, #0083e1 100%);
+   
+}
+.s{
+    color: black;
+    font-weight: 700;
+}
+.lupo{
+    margin-top: 100px;
+}
+.po{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.saq{
+    color: #2ca0d6  ;
+    background-color: #2ca0d6;
+}
